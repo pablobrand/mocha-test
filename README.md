@@ -10,6 +10,7 @@ This is an local aws simulation using ARC[https://arc.codes/docs/en/get-started/
 
 ### General Setup
 arc details[https://arc.codes/docs/en/get-started/project-manifest]
+```bash
 .
 ├── public .......... # Static assets (js, css, svg, images, etc.)
 ├── src
@@ -25,6 +26,7 @@ arc details[https://arc.codes/docs/en/get-started/project-manifest]
 └── app.arc
 └── tests 
 │   ├──  ......
+```
 
 ### Preconditions
 
