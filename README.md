@@ -1,62 +1,51 @@
 # Project Title
 
-Simple overview of use/purpose.
+POC for AWS + Mocha local dev 
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+This is an local aws simulation using ARC[https://arc.codes/docs/en/get-started/why-architect] and mocha + mochawesome (reporting) for the purpose of local development and initial poc setup of test suite.
 
-## Getting Started
+## Overview
 
-### Dependencies
+### General Setup
+arc details[https://arc.codes/docs/en/get-started/project-manifest]
+.
+├── public .......... # Static assets (js, css, svg, images, etc.)
+├── src
+│   ├── shared ...... # Code shared by all Lambda functions
+│   ├── views ....... # Code shared by HTTP GET Lambda functions
+│   ├── plugins ..... # Modify anything Architect does; including generated CloudFormation
+│   ├── http ........ # @http Lambda functions
+│   ├── events ...... # @event Lambda functions
+│   ├── queues ...... # @queue Lambda functions
+│   ├── scheduled ... # @scheduled Lambda functions
+│   ├── tables ...... # @table stream Lambda functions
+│   └── ws .......... # @ws Lambda functions
+└── app.arc
+└── tests 
+│   ├──  ......
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+### Preconditions
+
+* Nodejs
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
+```bash
+    npm install 
 ```
 
-## Help
-
-Any advise for common problems or issues.
+```bash
+    npm run test 
 ```
-command to run if program contains helper info
+* Note that the test will run arc automatically, then execute the given lambda function (in this case, under http folder)
+
+If you want arc to run on seperate instance, outside of the test, run following commmand 
+```bash
+    npm start 
 ```
 
-## Authors
 
-Contributors names and contact info
+### Docker setup?? CI setup??
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
